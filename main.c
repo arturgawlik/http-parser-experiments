@@ -3,7 +3,7 @@
 #include "string.h"
 
 int on_url(http_parser *parser, const char *at, size_t length) {
-  fprintf(stdout, "on_url callback: '%s' with length '%zu' \n", at, length);
+  printf("on_url callback: %.*s\n", length, at);
   return 0;
 }
 
